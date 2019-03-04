@@ -1,4 +1,9 @@
 <resources>
     <string name="app_name">WizeKids</string>
+    <string name="title">Ingresa tu nombre</string>
+    <string name="name">Nombre</string>
+    <string name="greetings">Saludar</string>
+    <string name="dialogTitle">Hola!</string>
+    <string name="close">Cerrar</string>
     <string name="action_settings">Settings</string>
 </resources>

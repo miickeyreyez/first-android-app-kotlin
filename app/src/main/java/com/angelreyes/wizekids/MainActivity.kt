@@ -1,11 +1,14 @@
 package com.angelreyes.wizekids
 
 import android.os.Bundle
+import android.support.v7.app.AlertDialog
 import android.support.v7.app.AppCompatActivity;
 import android.view.Menu
 import android.view.MenuItem
+import android.widget.Toast
 
 import kotlinx.android.synthetic.main.activity_main.*
+import kotlinx.android.synthetic.main.content_main.*
 
 class MainActivity : AppCompatActivity() {
 
@@ -13,6 +16,17 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         setSupportActionBar(toolbar)
+
+        button.setOnClickListener {
+            val builder = AlertDialog.Builder(this@MainActivity)
+            builder.setTitle(getString(R.string.dialogTitle))
+            builder.setMessage(editText.text)
+            builder.setPositiveButton(R.string.close){dialog, which ->
+            //      Toast.makeText(applicationContext,"",Toast.LENGTH_SHORT).show()
+            }
+            val dialog: AlertDialog = builder.create()
+            dialog.show()
+        }
     }
 
     override fun onCreateOptionsMenu(menu: Menu): Boolean {
